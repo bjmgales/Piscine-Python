@@ -1,0 +1,26 @@
+[build-system]
+
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+
+name="bgales_everywhere"
+version = "0.0.1"
+requires={text = "python 3 or >"}
+authors = [
+    {name="Bgales", email="bgales@student.42nice.fr"},
+    ]
+license = {text = "MIT"}
+description = "Could be the greatest package you ever installed."
+readme = "README.md"
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+Issues = "https://www.youtube.com/watch?v=cLGMWX-DSzY"
