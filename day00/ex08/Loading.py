@@ -1,6 +1,7 @@
 # from time import sleep
 # from tqdm import tqdm
 
+
 def ft_tqdm(lst: range) -> None:
     """ft_tqdm(itterable) ->None
 
@@ -10,6 +11,9 @@ def ft_tqdm(lst: range) -> None:
     Decorate an iterable object, returning an iterator which acts
     exactly like the original iterable, but prints a dynamically updating
     progressbar every time a value is requested. """
+
+    if type(lst) is not range:
+        raise TypeError("parameter must be of type range")
     percent = 0
     for i in range(lst.stop + 1):
         print("\r" + str(percent) + "%|" + ("█" * percent) +
@@ -19,15 +23,17 @@ def ft_tqdm(lst: range) -> None:
         yield
 
 
-#       Test        #
+# #       Test        #
 
 # def main():
-#         print(tqdm.__doc__)
-#     for elem in ft_tqdm(range(2322)):
-#         sleep(0.01)
-#     print()
-#     for elem in tqdm(range(2322)):
-#         sleep(0.1)
+#     try:
+#         for elem in ft_tqdm(range(232)):
+#             sleep(0.01)
+#         print()
+#         for elem in tqdm(range(232)):
+#             sleep(0.01)
+#     except (TypeError, ValueError) as error:
+#         print("Error:", error)
 
 
 # if __name__ == "__main__":
