@@ -21,27 +21,27 @@ def slice_me(family: list, start: int, end: int) -> list:
         return None
 
 
-def main():
+# def main():
 
-    # Subject Tests #
+#     # Subject Tests #
 
-    family = [[1.80, 78.4],
-              [2.15, 102.7],
-              [2.10, 98.5],
-              [1.88, 75.2]]
+#     family = [[1.80, 78.4],
+#               [2.15, 102.7],
+#               [2.10, 98.5],
+#               [1.88, 75.2]]
 
-    print(slice_me(family, 0, 2))
-    print("toto", slice_me(family, 1, -2))
+#     print(slice_me(family, 0, 2))
+#     print("toto", slice_me(family, 1, -2))
 
-    # Error cases #
+#     # Error cases #
 
-    family = []
-    slice_me(family, 0, 2)
-    family = ["toto", 1]
-    slice_me(family, 0, 2)
-    slice_me(None, 0, 2)
-    slice_me([0, 1], 0, "toto")
+#     family = []
+#     slice_me(family, 0, 2)
+#     family = ["toto", 1]
+#     slice_me(family, 0, 2)
+#     slice_me(None, 0, 2)
+#     slice_me([0, 1], 0, "toto")
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
