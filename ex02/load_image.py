@@ -21,5 +21,5 @@ def main():
     print(ft_load("./ex02/permission.jpg"))
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
