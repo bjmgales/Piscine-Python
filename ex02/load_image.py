@@ -2,6 +2,7 @@ import imageio.v2 as lio
 
 
 def ft_load(path: str) -> tuple:
+    """Load image as a numpy array."""
     try:
         if not isinstance(path, str):
             raise TypeError("TypeError: path parameter must be of str type")

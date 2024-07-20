@@ -2,6 +2,8 @@ import numpy as np
 
 
 def slice_me(family: list, start: int, end: int) -> list:
+    """Slice and returns the provided list \
+        into the new shape ``lst[start:end]``."""
     try:
         if not isinstance(start, int) or not isinstance(end, int)\
                 or not isinstance(family, list):

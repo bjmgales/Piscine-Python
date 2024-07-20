@@ -1,5 +1,7 @@
 def give_bmi(height: list[int | float], weight: list[int | float])\
         -> list[int | float]:
+    """Calculates and returns bmi list \
+        for each entries of weight and height."""
     if not height or not weight:
         raise ValueError("Error: parameters cannot be empty.")
     if not isinstance(weight, list) or not isinstance(height, list)\
@@ -17,6 +19,9 @@ have equal number of elements")
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """Returns a list of boolean. True if the provided bmi is superior\
+         to the provided limit. False otherwise."""
+
     if not bmi:
         raise ValueError("Error:bmi parameter must not be empty")
     if not isinstance(bmi, list) or\
