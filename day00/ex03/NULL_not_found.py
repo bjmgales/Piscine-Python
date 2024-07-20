@@ -1,6 +1,6 @@
 def NULL_not_found(object: any) -> int:
     """Prints the type of object when object is null.
-    
+
     Returns 1 if object is not null.
     Returns 0 otherwise."""
     if type(object) is int and object == 0:
