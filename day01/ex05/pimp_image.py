@@ -62,6 +62,7 @@ def ft_gray(array) -> list:
 
 
 def main():
+    """Main function for pimp_image.py"""
     img = ft_load("./ex05/grayscale.jpg")
     print(img)
     ft_blue(img)

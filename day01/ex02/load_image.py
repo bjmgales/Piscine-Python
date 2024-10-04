@@ -16,6 +16,7 @@ def ft_load(path: str) -> tuple:
 
 
 def main():
+    """Main function for load.py"""
     print(ft_load("./ex02/image.png"))
     print(ft_load("./ex02/image.jpg"))
     print(ft_load("./ex02/corrupted.jpg"))

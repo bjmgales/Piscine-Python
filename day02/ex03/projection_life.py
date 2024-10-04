@@ -3,6 +3,8 @@ from load_csv import load
 
 
 def show_income_life_graph(income_path: str, life_path: str):
+    """Displays a graph showing the relation between \
+        life expectancy and GDP."""
     income_df = load(income_path)
     life_df = load(life_path)
     plt.title("1900")
@@ -19,6 +21,7 @@ def show_income_life_graph(income_path: str, life_path: str):
 
 
 def main():
+    """Main function for projection_life."""
     show_income_life_graph("./ex03/income_per_person_gdpper"
                            "capita_ppp_inflation_adjusted.csv",
                            "./ex03/life_expectancy_years.csv")

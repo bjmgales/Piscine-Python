@@ -3,6 +3,8 @@ from load_csv import load
 
 
 def convert_abbr_num(num: str):
+    """Converts a string number from abbreviated format \"10K\" to pure\
+        numerical format \"10 000\"."""
     if 'K' in num:
         num = float(num.replace('K', '')) * 1000
     if 'M' in num:
@@ -11,7 +13,8 @@ def convert_abbr_num(num: str):
 
 
 def compare_pop(path: str):
-
+    """Displays a graph comparing the life expectancy projections\
+          of two countries"""
     dataset = load(path)
     france = dataset.loc[dataset["country"] == "France"]
     belgium = dataset.loc[dataset["country"] == "Belgium"]
@@ -32,6 +35,7 @@ def compare_pop(path: str):
 
 
 def main():
+    """Main function for aff_life.py"""
     compare_pop("./ex02/population_total.csv")
 
 

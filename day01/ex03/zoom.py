@@ -28,6 +28,7 @@ def ft_zoom(path: str):
 
 
 def main():
+    """Main function for zoom.py"""
     ft_zoom("./ex03/animal.jpeg")
 
 

@@ -2,6 +2,7 @@ import pandas as pd
 
 
 def load(path: str) -> list:
+    """Load csv file with path parameter."""
     try:
         assert isinstance(path, str), "path parameter must be of str type"
         assert path.endswith('.csv'), "awaiting .csv file"

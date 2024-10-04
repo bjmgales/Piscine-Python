@@ -39,6 +39,7 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
 
 
 def main():
+    """Main function for give_bmi"""
     try:
         height = [10, 1]
         weight = [35, 38.4]

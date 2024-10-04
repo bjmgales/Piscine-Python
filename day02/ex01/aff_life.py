@@ -3,7 +3,8 @@ from load_csv import load
 
 
 def aff_life(path: str):
-
+    """Load csv file with path parameter, then displays a graph \
+        showing life expectancy projection."""
     dataset = load(path)
     if dataset is None:
         return None
@@ -20,6 +21,7 @@ def aff_life(path: str):
 
 
 def main():
+    """Main function for aff_life.py"""
     aff_life("./ex01/life_expectancy_years.csv")
 
 
