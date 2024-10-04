@@ -1,4 +1,6 @@
 def callLimit(limit: int):
+    """Returns a function to limit the number of times a given function \
+        can be called."""
     try:
         if not isinstance(limit, int):
             raise ValueError("limit parameter must be of int type.")
@@ -9,12 +11,15 @@ def callLimit(limit: int):
     count = 0
 
     def callLimiter(function):
+        """Wraps the given function with a call limit."""
         nonlocal count
 
 # *args and **kwds are here solely to ensure
 # any type of function could be called.
 
         def limit_function(*args: any, **kwds: any):
+            """Calls the given function if the call limit has not \
+                been exceeded."""
             nonlocal count
             if count < limit:
                 count += 1

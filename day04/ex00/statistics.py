@@ -1,4 +1,5 @@
 def is_valid(vargs) -> bool:
+    """Checks if the requested operation is valid."""
     valid = ["mean", "median", "quartile", "std", "var"]
 
     for v in vargs:
@@ -9,14 +10,18 @@ def is_valid(vargs) -> bool:
 
 
 def float_check(num):
+    """Checks if the operation resulted in a float number. If so, returns the\
+          float number, otherwise, removes the remaining \".0\""""
     return int(num) if num % 1 == 0 else num
 
 
 def mean(nums):
+    """Returns the mean of the number list."""
     return float_check(sum(nums) / len(nums))
 
 
 def median(nums):
+    """Returns the median of the number list."""
     nums = sorted(nums)
     med_len = int(len(nums) / 2)
     if (len(nums) % 2) != 0:
@@ -26,6 +31,7 @@ def median(nums):
 
 
 def quartile(nums):
+    """Returns the quartile of the number list."""
     nums = sorted(nums)
     med_len = int(len(nums) / 2)
     if len(nums) % 2 == 0:
@@ -40,15 +46,19 @@ def quartile(nums):
 
 
 def var(nums):
+    """Returns the variance of the number list."""
     m = mean(nums)
     return float(sum([(m - elem) ** 2 for elem in nums]) / (len(nums) - 1))
 
 
 def std(nums):
+    """Returns the standard deviation of the number list."""
     return float(var(nums) ** 0.5)
 
 
 def ft_statistics(*args: any, **kwargs: any) -> None:
+    """Checks for the parameters validity and calls the right function\
+         depending on the requested operation."""
     functions = {
         'mean': mean,
         'median': median,
@@ -75,12 +85,14 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
 
 
 def main():
+    """Main function for statistics.py"""
     # ft_statistics(0, 0, 0, 0, toto="mean", tutu="median", tata="quartile")
     ft_statistics(1, 2, 3, 4, toto="mean", tutu="median", tata="quartile")
     print("-----")
     ft_statistics(5, 75, 450, 18, 597, 27474, 48575, hello="std", world="var")
     print("-----")
-    ft_statistics(5, 75, 450, 18, 597, 27474, 48575, ejfhhe="heheh", ejdjdejn="kdekem")
+    ft_statistics(5, 75, 450, 18, 597, 27474, 48575, ejfhhe="heheh",
+                  ejdjdejn="kdekem")
     print("-----")
     ft_statistics(toto="mean", tutu="median", tata="quartile")
 

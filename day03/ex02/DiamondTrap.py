@@ -42,5 +42,6 @@ def main():
     print(Joffrey.get_hairs())
     print(Joffrey.__dict__)
 
+
 if __name__ == "__main__":
     main()

@@ -1,5 +1,6 @@
 
 def is_num(x: any) -> bool:
+    """Checks if the parameter is a number."""
     if not isinstance(x, int | float):
         print("ValueError: parameter x must be either int or float")
         return False
@@ -7,20 +8,23 @@ def is_num(x: any) -> bool:
 
 
 def square(x: int | float) -> int | float:
+    """Returns the parameter square."""
     return x ** 2 if is_num(x) else None
 
 
 def pow(x: int | float) -> int | float:
+    """Raises the parameter to the power of itself."""
     return x ** x if is_num(x) else None
 
 
 def outer(x: int | float, function) -> object:
-    """"""
+    """Returns an inner function that repeatedly applies the given function."""
     count = 0
     if not is_num(x):
         return outer(0, function)
 
     def inner() -> float:
+        """Applies the given function and increments the count."""
         nonlocal count  # allow count to be re-assigned insigned inner scope.
         result = x
         for i in range(count):
@@ -32,6 +36,7 @@ def outer(x: int | float, function) -> object:
 
 
 def main():
+    """Main for in_out.py"""
     my_counter = outer(3, square)
     print(my_counter())
     print(my_counter())
